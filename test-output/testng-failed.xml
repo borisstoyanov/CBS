@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [DevTesting of 2.4.1.0 features]" parallel="tests" allow-return-values="true">
+  <test thread-count="8" name="Load Tests" parallel="methods">
+    <groups>
+      <run>
+        <include name="Sanity"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="src.test.java.SearchTest"/>
+    </classes>
+  </test> <!-- Load Tests -->
+  <test name="Load Tests(failed)" parallel="methods">
+    <groups>
+      <run>
+        <include name="Sanity"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="src.test.java.SearchTest">
+        <methods>
+          <include name="test5"/>
+          <include name="tearDown"/>
+          <include name="test1"/>
+          <include name="setUp"/>
+          <include name="test6"/>
+          <include name="test7"/>
+          <include name="test8"/>
+          <include name="test2"/>
+          <include name="test3"/>
+          <include name="test4"/>
+        </methods>
+      </class> <!-- src.test.java.SearchTest -->
+    </classes>
+  </test> <!-- Load Tests(failed) -->
+</suite> <!-- Failed suite [DevTesting of 2.4.1.0 features] -->
